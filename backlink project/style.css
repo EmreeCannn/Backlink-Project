@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    /* inputlarda padding margin değerlerine etki eder */
+}
+body{
+    background-color: #673aaa;
+}
+#show-modal{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 20rem;
+    margin: 20px auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 21px;
+    border-radius: 12px;
+}
+.modal_container{
+    position:fixed;
+    inset: 0;
+    display: none;
+    /* insent 0 sayesinde görünen tüm alanı kaplamasını sağlarım  */
+    /* ve bu sayede flex ile ortalayabilirim */
+}
+.show-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    background: white;
+    width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: modelopen 1s;
+}
+@keyframes modelopen{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #673aaa;
+    color: white;
+    padding: 15px;
+    
+}
+.modal-content{
+    padding: 20px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+}
+.form-group input{
+    border: 2px solid #673aaa;
+    padding: 3px;
+    outline: none;
+    border-radius: 6px;
+}
+.form-group label{
+    color: #673aaa;
+}
+.btn{
+    background: #673aaa;
+    color: white;
+    height: 32px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+}
+.Backlink_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Backlink_container div{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    margin:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.Backlink_container div>a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.Backlink_container div>a:hover{
+    text-decoration:underline;
+}
+.Backlink_container div>i{
+    position: absolute;
+    right: 12px;
+    top: 15px;
+}
+
+i{
+    font-size: 23px;
+    cursor: pointer;
+}
